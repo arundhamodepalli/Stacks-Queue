@@ -7,11 +7,12 @@ namespace Stack_Queue
         static void Main(string[] args)
         {
             Console.WriteLine("welcome to stacks and queues");
-            LinkedListStack stack = new LinkedListStack();
-            stack.Push(70);
-            stack.Push(30);
+            Stack<int> stack = new Stack<int>();
+
             stack.Push(56);
-            Console.WriteLine(stack.Peek());
+            stack.Push(30);
+            stack.Push(70);
+            Console.WriteLine(stack.Pop());
         }
     }
 }
