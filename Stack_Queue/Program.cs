@@ -1,4 +1,5 @@
 ﻿using static Stack_Queue.CreateStack;
+using static Stack_Queue.DequeueStack;
 
 namespace Stack_Queue
 {
@@ -6,12 +7,16 @@ namespace Stack_Queue
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("welcome to stacks and queues");         
-            LinkedListStack stack = new LinkedListStack();
-            stack.Push(70);
-            stack.Push(30);
-            stack.Push(56);
-            Console.WriteLine("Popped value from stack: " + stack.Pop());
+            Console.WriteLine("Welcome to stacks and queues");
+            LinkedListQueue queue = new LinkedListQueue();
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            Console.WriteLine("Front value of the queue: " + queue.Peek());
+            while (!queue.IsEmpty())
+            {
+                Console.WriteLine("Dequeued value from queue: " + queue.Dequeue());
+            }
         }
     }
 }
