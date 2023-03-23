@@ -6,13 +6,12 @@ namespace Stack_Queue
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("welcome to stacks and queues");
-            Stack<int> stack = new Stack<int>();
-
-            stack.Push(56);
-            stack.Push(30);
+            Console.WriteLine("welcome to stacks and queues");         
+            LinkedListStack stack = new LinkedListStack();
             stack.Push(70);
-            Console.WriteLine(stack.Pop());
+            stack.Push(30);
+            stack.Push(56);
+            Console.WriteLine("Popped value from stack: " + stack.Pop());
         }
     }
 }
